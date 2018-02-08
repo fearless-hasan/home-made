@@ -15,6 +15,11 @@ class CreateReviewsTable extends Migration
     {
         Schema::create('reviews', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('item_id');
+            $table->string('name');
+            $table->string('comment');
+            $table->boolean('publication_status');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

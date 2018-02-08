@@ -15,7 +15,15 @@ class CreateItemsTable extends Migration
     {
         Schema::create('items', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('sub_categories_id');
+            $table->string('item_name');
+            $table->string('item_detail');
+            $table->string('unit');
+            $table->string('price');
+            $table->boolean('publication_status');
+            $table->softDeletes();
             $table->timestamps();
+
         });
     }
 
