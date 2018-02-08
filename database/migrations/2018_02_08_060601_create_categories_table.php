@@ -21,7 +21,6 @@ class CreateCategoriesTable extends Migration
             $table->boolean('publication_status');
             $table->softDeletes();
             $table->timestamps();
-
         });
     }
 
