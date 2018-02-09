@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div class="navbar-default sidebar" role="navigation">
     <div class="sidebar-nav navbar-collapse">
         <ul class="nav" id="side-menu">
@@ -127,3 +128,12 @@
     </div>
     <!-- /.sidebar-collapse -->
 </div>
+=======
+<?php
+/**
+ * Created by PhpStorm.
+ * User: rothee
+ * Date: 2/8/2018
+ * Time: 9:18 PM
+ */
+>>>>>>> 0215fcdbfa39b01bc20f2666ef73fa6d12fa3b32
