@@ -72,52 +72,11 @@
 <header>
 
 
-    <div class="header-white">
-        <div class="container">
-            <div class="row">
-                <div class="span12 header-menu">
-                    <ul>
-                        <li><a href="#">Join Free</a></li>
-                        <li><a href="#">Subscribe to newsletter</a></li>
-                        <li><a href="#">Log in</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
+   @include('front-end.includes.header')
 
 
 
-    <div class="container">
-        <div class="row">
-            <div class="span12 header-block">
-                <h1 class="brand"><a href="index.html"><img src="{{ asset('/') }}/front-end/img/logo.png" alt="Cooking Recipes"></a></h1>
-                <div class="navbar navbar_ clearfix">
-                    <div class="navbar-inner">
-                        <div class="nav-collapse nav-collapse_ collapse">
-                            <ul class="nav sf-menu clearfix">
-                                <li class="active"><a href="{{route('/')}}">Home</a></li>
-                                <li class="sub-menu"><a href="{{route('news')}}">News</a>
-                                    <ul>
-                                        <li><a href="#">Lorem ipsum</a></li>
-                                        <li><a href="#">Dolor sit amet</a></li>
-                                        <li><a href="#">Conse ctetur</a></li>
-                                        <li><a href="#">Dipisicing</a></li>
-                                        <li><a href="#">Eeliteiusmod</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="{{route('new-recipe')}}">New recipes</a></li>
-                                <li><a href="{{route('post-recipe')}}">Post recipe</a></li>
-                                <li><a href="{{route('contacts')}}">Contacts</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
+    @include('front-end.includes.menu')
 </header>
 
 
@@ -125,58 +84,7 @@
 @yield('body')
 <!--==============================aside=================================-->
 <aside>
-    <div class="container">
-        <div class="row aside-list">
-            <div class="span3">
-                <div class="maxheight">
-                    <h5>Navigation</h5>
-                    <ul>
-                        <li><a href="{{route('/')}}" class="active">Home</a></li>
-                        <li><a href="{{route('news')}}">News</a></li>
-                        <li><a href="{{route('new-recipe')}}">New recipes</a></li>
-                        <li><a href="{{route('post-recipe')}}">Post recipe</a></li>
-                        <li><a href="{{route('contacts')}}">Contacts</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="span3">
-                <div class="maxheight">
-                    <h5>Categories</h5>
-                    <ul>
-                        <li><a href="#">Breakfast Recipes</a></li>
-                        <li><a href="#">Appetizer Recipes</a></li>
-                        <li><a href="#">Bread Recipes</a></li>
-                        <li><a href="#">Soup Recipes</a></li>
-                        <li><a href="#">Main Dish Recipes</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="span3">
-                <div class="maxheight">
-                    <h5>Popular</h5>
-                    <ul>
-                        <li><a href="#">Lorem ipsum dolor sit amet</a></li>
-                        <li><a href="#">Conse ctetur adipisicing</a></li>
-                        <li><a href="#">Elit sed do eiusmod tempor</a></li>
-                        <li><a href="#">Incididunt ut labore</a></li>
-                        <li><a href="#">Et dolore magna aliqua</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="span3">
-                <div class="maxheight">
-                    <h5>Events</h5>
-                    <ul>
-                        <li><a href="#">Dolor sit amet</a></li>
-                        <li><a href="#">Ctetur adipisicing</a></li>
-                        <li><a href="#">Elit sed do eiusmod tempor</a></li>
-                        <li><a href="#">Incididunt ut labore</a></li>
-                        <li><a href="#">Et dolore magna</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
+   @include('front-end.includes.big-footer')
 </aside>
 <!--==============================footer=================================-->
 <footer>
