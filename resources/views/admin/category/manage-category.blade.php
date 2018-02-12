@@ -26,13 +26,14 @@
                                         <img src="{{ asset($category->category_photo) }}" alt="" height="100" width="100">
                                     </td>
                                     <td>{{ $category->category_detail }}</td>
+                                    <td class="{{ $category->publication_status == 0 ? "btn-success" : "btn-danger" }}">{{ $category->publication_status == 0 ? "Unpublished" : "Published" }}</td>
                                     <td>
                                         @if($category->publication_status == 1)
-                                            <a href="{{ route('unpublished-category', ['id'=>$category->id]) }}" class="btn btn-info btn-xs">
+                                            <a href="{{ route('unpublish-category', ['id'=>$category->id]) }}" class="btn btn-info btn-xs">
                                                 <span class="glyphicon glyphicon-arrow-up"></span>
                                             </a>
                                         @else
-                                            <a href="{{ route('published-category', ['id'=>$category->id]) }}" class="btn btn-warning btn-xs">
+                                            <a href="{{ route('publish-category', ['id'=>$category->id]) }}" class="btn btn-warning btn-xs">
                                                 <span class="glyphicon glyphicon-arrow-down"></span>
                                             </a>
                                         @endif

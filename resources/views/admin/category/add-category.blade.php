@@ -6,7 +6,7 @@
             <div class="panel panel-default">
                 <div class="panel-body">
                     <h3 class="text-center text-success">{{ Session::get('message') }}</h3>
-                    {{ Form::open(['route'=>'new-category', 'method'=>'POST', 'class'=>'form-horizontal', 'enctype'=>'multipart/form-data']) }}
+                    {{ Form::open(['route'=>'add-category', 'method'=>'POST', 'class'=>'form-horizontal', 'enctype'=>'multipart/form-data']) }}
 
                     <div class="form-group">
                         <label class="control-label col-md-3">Category Name</label>
@@ -19,14 +19,14 @@
                     <div class="form-group">
                         <label class="control-label col-md-3">Category Photo</label>
                         <div class="col-md-9">
-                            <input type="file" name="category_photo" accept="image/*"/>
+                            <input class="form-control" type="file" name="category_photo" accept="image/*"/>
                             <span class="text-danger">{{ $errors->has('category_photo') ? $errors->first('category_photo') : ' ' }}</span>
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="control-label col-md-3">Category Detail</label>
                         <div class="col-md-9">
-                            <textarea class="form-control"  name="category_detail"></textarea>
+                            <textarea class="form-control"  name="category_detail" id="editor"></textarea>
                             <span class="text-danger">{{ $errors->has('category_detail') ? $errors->first('category_detail') : ' ' }}</span>
                         </div>
                     </div>

@@ -21,7 +21,7 @@
                     <div class="form-group">
                         <label class="control-label col-md-3">Category Detail</label>
                         <div class="col-md-9">
-                            <textarea class="form-control"  name="category_detail">{{ $category->category_detail }}</textarea>
+                            <textarea class="form-control"  name="category_detail" id="editor">{{ $category->category_detail }}</textarea>
                             <span class="text-danger">{{ $errors->has('category_detail') ? $errors->first('category_detail') : ' ' }}</span>
                         </div>
                     </div>
@@ -38,8 +38,8 @@
                     <div class="form-group">
                         <label class="control-label col-md-3">Publication status</label>
                         <div class="col-md-9 radio">
-                            <label><input type="radio" name="publication_status" {{ $product->publication_status == 1 ? 'checked' : '' }} value="1"/> Published </label>
-                            <label><input type="radio" name="publication_status" {{ $product->publication_status == 0 ? 'checked' : '' }} value="0"/> Unpublished </label><br/>
+                            <label><input type="radio" name="publication_status" {{ $category->publication_status == 1 ? 'checked' : '' }} value="1"/> Published </label>
+                            <label><input type="radio" name="publication_status" {{ $category->publication_status == 0 ? 'checked' : '' }} value="0"/> Unpublished </label><br/>
                             <span class="text-danger">{{ $errors->has('publication_status') ? $errors->first('publication_status') : ' ' }}</span>
                         </div>
                     </div>

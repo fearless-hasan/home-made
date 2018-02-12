@@ -20,10 +20,10 @@
                 <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Category<span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level">
                     <li>
-                        <a href="flot.html">Flot Charts</a>
+                        <a href="{{ route('new-category') }}">Add Category</a>
                     </li>
                     <li>
-                        <a href="morris.html">Morris.js Charts</a>
+                        <a href="{{ route('manage-category') }}">Manage Category</a>
                     </li>
                 </ul>
                 <!-- /.nav-second-level -->
