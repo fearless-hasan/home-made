@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 <div class="navbar-header">
     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
         <span class="sr-only">Toggle navigation</span>
@@ -222,12 +222,4 @@
     </li>
     <!-- /.dropdown -->
 </ul>
-=======
-<?php
-/**
- * Created by PhpStorm.
- * User: rothee
- * Date: 2/8/2018
- * Time: 9:18 PM
- */
->>>>>>> 0215fcdbfa39b01bc20f2666ef73fa6d12fa3b32
+

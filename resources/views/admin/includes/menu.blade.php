@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 <div class="navbar-default sidebar" role="navigation">
     <div class="sidebar-nav navbar-collapse">
         <ul class="nav" id="side-menu">
@@ -14,7 +14,7 @@
                 <!-- /input-group -->
             </li>
             <li>
-                <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                <a href="{{ route('home') }}"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
             </li>
             <li>
                 <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Category<span class="fa arrow"></span></a>
@@ -128,12 +128,4 @@
     </div>
     <!-- /.sidebar-collapse -->
 </div>
-=======
-<?php
-/**
- * Created by PhpStorm.
- * User: rothee
- * Date: 2/8/2018
- * Time: 9:18 PM
- */
->>>>>>> 0215fcdbfa39b01bc20f2666ef73fa6d12fa3b32
+

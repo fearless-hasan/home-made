@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 
@@ -34,6 +33,7 @@
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+
 </head>
 
 <body>
@@ -42,16 +42,16 @@
 
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
-        @include('admin.includes.header')
-        <!-- /.navbar-top-links -->
-        @include('admin.includes.menu')
-        <!-- /.navbar-static-side -->
+    @include('admin.includes.header')
+    <!-- /.navbar-top-links -->
+    @include('admin.includes.menu')
+    <!-- /.navbar-static-side -->
     </nav>
     <div id="page-wrapper">
         @yield('body')
     </div>
-<!-- /#wrapper -->
-
+    <!-- /#wrapper -->
+</div>
 <!-- jQuery -->
 <script src="{{ asset('/') }}admin/vendor/jquery/jquery.min.js"></script>
 
@@ -69,15 +69,6 @@
 <!-- Custom Theme JavaScript -->
 <script src="{{ asset('/') }}admin/dist/js/sb-admin-2.js"></script>
 
-</body>
 
+</body>
 </html>
-=======
-<?php
-/**
- * Created by PhpStorm.
- * User: rothee
- * Date: 2/8/2018
- * Time: 9:20 PM
- */
->>>>>>> 0215fcdbfa39b01bc20f2666ef73fa6d12fa3b32
