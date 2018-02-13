@@ -51,7 +51,7 @@
                     </div>
                     <div class="form-group">
                         <div class="col-md-9 col-md-offset-3">
-                            <input type="submit" name="btn" class="btn btn-success btn-block" value="Save Category Info"/>
+                            <input type="submit" name="btn" class="btn btn-success btn-block" value="Save Sub Category Info"/>
                         </div>
                     </div>
                     {{ Form::close() }}
