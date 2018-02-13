@@ -10,10 +10,9 @@
                         <table class="table table-bordered">
                             <tr class="bg-primary">
                                 <th>Sl No</th>
-                                <th>Categiry Name</th>
-                                <th>Sub Category Name</th>
-                                <th>Sub Category Photo</th>
-                                <th>Sub Category Detail</th>
+                                <th>Item Name</th>
+                                <th>Name</th>
+                                <th>Comment</th>
                                 <th>Publication Status</th>
                                 <th>Action</th>
                             </tr>
@@ -21,28 +20,24 @@
                             @foreach($subCategories as $subCategory)
                                 <tr>
                                     <td>{{ $i++ }}</td>
-                                    <td>{{ $subCategory->category_name }}</td>
-                                    <td>{{ $subCategory->sub_category_name }}</td>
-
+                                    <td>{{ $review->item_name }}</td>
+                                    <td>{{ $review->name }}</td>
+                                    <td>{{ $review->comment }}</td>
+                                    <td class="{{ $review->publication_status == 0 ? "btn-success" : "btn-danger" }}">{{ $review->publication_status == 0 ? "Unpublished" : "Published" }}</td>
                                     <td>
-                                        <img src="{{ asset($subCategory->sub_category_photo) }}" alt="" height="100" width="100">
-                                    </td>
-                                    <td>{{ $subCategory->sub_category_detail }}</td>
-                                    <td class="{{ $subCategory->publication_status == 0 ? "btn-success" : "btn-danger" }}">{{ $subCategory->publication_status == 0 ? "Unpublished" : "Published" }}</td>
-                                    <td>
-                                        @if($subCategory->publication_status == 1)
-                                            <a href="{{ route('unpublish-category', ['id'=>$subCategory->id]) }}" class="btn btn-info btn-xs">
+                                        @if($review->publication_status == 1)
+                                            <a href="{{ route('unpublish-review', ['id'=>$review->id]) }}" class="btn btn-info btn-xs">
                                                 <span class="glyphicon glyphicon-arrow-up"></span>
                                             </a>
                                         @else
-                                            <a href="{{ route('publish-category', ['id'=>$subCategory->id]) }}" class="btn btn-warning btn-xs">
+                                            <a href="{{ route('publish-review', ['id'=>$review->id]) }}" class="btn btn-warning btn-xs">
                                                 <span class="glyphicon glyphicon-arrow-down"></span>
                                             </a>
                                         @endif
-                                        <a href="{{ route('edit-category', ['id'=>$subCategory->id]) }}" class="btn btn-success btn-xs">
+                                        <a href="{{ route('edit-review', ['id'=>$review->id]) }}" class="btn btn-success btn-xs">
                                             <span class="glyphicon glyphicon-edit"></span>
                                         </a>
-                                        <a href="{{ route('delete-category', ['id'=>$subCategory->id]) }}" class="btn btn-danger btn-xs">
+                                        <a href="{{ route('delete-review', ['id'=>$review->id]) }}" class="btn btn-danger btn-xs">
                                             <span class="glyphicon glyphicon-trash"></span>
                                         </a>
                                     </td>
