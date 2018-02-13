@@ -6,7 +6,7 @@
             <div class="panel panel-default">
                 <div class="panel-body">
                     <h3 class="text-center text-success">{{ Session::get('message') }}</h3>
-                    {{ Form::open(['route'=>'update-category', 'method'=>'POST', 'class'=>'form-horizontal', 'enctype'=>'multipart/form-data', 'name'=>'editProductForm']) }}
+                    {{ Form::open(['route'=>'update-category', 'method'=>'POST', 'class'=>'form-horizontal', 'enctype'=>'multipart/form-data', 'name'=>'editCategoryForm']) }}
 
                     <div class="form-group">
                         <label class="control-label col-md-3">Category Name</label>
