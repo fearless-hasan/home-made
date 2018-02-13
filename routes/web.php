@@ -96,37 +96,37 @@ Route::get('/sub-category/new',[
 ]);
 
 Route::get('/sub-category/manage',[
-    'uses'=>'SubCategoryController@getAllCategoty',
+    'uses'=>'SubCategoryController@getAllSubCategoty',
     'as'=>'manage-sub-category'
 ]);
 
 Route::get('/sub-category/edit/{id}',[
-    'uses'=>'SubCategoryController@getCategoryById',
+    'uses'=>'SubCategoryController@getSubCategoryById',
     'as'=>'edit-sub-category'
 ]);
 
 Route::post('/sub-category/add',[
-    'uses'=>'SubCategoryController@addCategory',
+    'uses'=>'SubCategoryController@addSubCategory',
     'as'=>'add-sub-category'
 ]);
 
 Route::get('/sub-category/delete/{id}',[
-    'uses'=>'SubCategoryController@deleteCategory',
+    'uses'=>'SubCategoryController@deleteSubCategory',
     'as'=>'delete-sub-category'
 ]);
 
 Route::get('/sub-category/publish',[
-    'uses'=>'SubCategoryController@publishCategory',
+    'uses'=>'SubCategoryController@publishSubCategory',
     'as'=>'publish-sub-category'
 ]);
 
 Route::get('/sub-category/unpublish',[
-    'uses'=>'SubCategoryController@unpublishCategory',
+    'uses'=>'SubCategoryController@unpublishSubCategory',
     'as'=>'unpublish-sub-category'
 ]);
 
 Route::get('/sub-category/update',[
-    'uses'=>'SubCategoryController@updateCategory',
+    'uses'=>'SubCategoryController@updateSubCategory',
     'as'=>'update-sub-category'
 ]);
 
@@ -173,44 +173,44 @@ Route::get('/item/update',[
     'as'=>'update-item'
 ]);//category
 
-Route::get('/item/new',[
-    'uses'=>'ItemController@index',
-    'as'=>'new-item'
+Route::get('/review/new',[
+    'uses'=>'ReviewController@index',
+    'as'=>'new-review'
 ]);
 
-Route::get('/item/manage',[
-    'uses'=>'ItemController@getAllCategoty',
-    'as'=>'manage-item'
+Route::get('/review/manage',[
+    'uses'=>'ReviewController@getAllReview',
+    'as'=>'manage-review'
 ]);
 
-Route::get('/item/edit/{id}',[
-    'uses'=>'ItemController@getCategoryById',
-    'as'=>'edit-item'
+Route::get('/review/edit/{id}',[
+    'uses'=>'ReviewController@getReviewById',
+    'as'=>'edit-review'
 ]);
 
-Route::post('/item/add',[
-    'uses'=>'ItemController@addCategory',
-    'as'=>'add-item'
+Route::post('/review/add',[
+    'uses'=>'ReviewController@addReview',
+    'as'=>'add-review'
 ]);
 
-Route::get('/item/delete/{id}',[
-    'uses'=>'ItemController@deleteCategory',
-    'as'=>'delete-item'
+Route::get('/review/delete/{id}',[
+    'uses'=>'ReviewController@deleteReview',
+    'as'=>'delete-review'
 ]);
 
-Route::get('/item/publish',[
-    'uses'=>'ItemController@publishCategory',
-    'as'=>'publish-item'
+Route::get('/review/publish',[
+    'uses'=>'ReviewController@publishReview',
+    'as'=>'publish-review'
 ]);
 
-Route::get('/item/unpublish',[
-    'uses'=>'ItemController@unpublishCategory',
-    'as'=>'unpublish-item'
+Route::get('/review/unpublish',[
+    'uses'=>'ReviewController@unpublishReview',
+    'as'=>'unpublish-review'
 ]);
 
-Route::get('/item/update',[
-    'uses'=>'ItemController@updateCategory',
-    'as'=>'update-item'
+Route::get('/review/update',[
+    'uses'=>'ReviewController@updateReview',
+    'as'=>'update-review'
 ]);
 
 

@@ -31,18 +31,18 @@
                                     <td class="{{ $subCategory->publication_status == 0 ? "btn-success" : "btn-danger" }}">{{ $subCategory->publication_status == 0 ? "Unpublished" : "Published" }}</td>
                                     <td>
                                         @if($subCategory->publication_status == 1)
-                                            <a href="{{ route('unpublish-category', ['id'=>$subCategory->id]) }}" class="btn btn-info btn-xs">
+                                            <a href="{{ route('unpublish-sub-category', ['id'=>$subCategory->id]) }}" class="btn btn-info btn-xs">
                                                 <span class="glyphicon glyphicon-arrow-up"></span>
                                             </a>
                                         @else
-                                            <a href="{{ route('publish-category', ['id'=>$subCategory->id]) }}" class="btn btn-warning btn-xs">
+                                            <a href="{{ route('publish-sub-category', ['id'=>$subCategory->id]) }}" class="btn btn-warning btn-xs">
                                                 <span class="glyphicon glyphicon-arrow-down"></span>
                                             </a>
                                         @endif
-                                        <a href="{{ route('edit-category', ['id'=>$subCategory->id]) }}" class="btn btn-success btn-xs">
+                                        <a href="{{ route('edit-sub-category', ['id'=>$subCategory->id]) }}" class="btn btn-success btn-xs">
                                             <span class="glyphicon glyphicon-edit"></span>
                                         </a>
-                                        <a href="{{ route('delete-category', ['id'=>$subCategory->id]) }}" class="btn btn-danger btn-xs">
+                                        <a href="{{ route('delete-sub-category', ['id'=>$subCategory->id]) }}" class="btn btn-danger btn-xs">
                                             <span class="glyphicon glyphicon-trash"></span>
                                         </a>
                                     </td>

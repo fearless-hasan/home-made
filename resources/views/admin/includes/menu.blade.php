@@ -29,7 +29,7 @@
                 <!-- /.nav-second-level -->
             </li>
             <li>
-                <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Sub-Category<span class="fa arrow"></span></a>
+                <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Sub Category<span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level">
                     <li>
                         <a href="{{ route('add-sub-category') }}">Add Sub Category</a>
@@ -50,6 +50,18 @@
                         <a href="morris.html">Morris.js Charts</a>
                     </li>
                 </ul>
+            <li>
+                <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>Review<span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level">
+                    <li>
+                        <a href="{{ route('add-review') }}">Add Review/a>
+                    </li>
+                    <li>
+                        <a href="{{ route('manage-review') }}">Manage Review</a>
+                    </li>
+                </ul>
+                <!-- /.nav-second-level -->
+            </li>
                 <!-- /.nav-second-level -->
             </li>
             <li>

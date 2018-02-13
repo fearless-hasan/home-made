@@ -40,7 +40,7 @@ class SubCategoryController extends Controller
         $subCategory = SubCategory::find($id);
         $subCategory->publication_status = 1;
         $subCategory->save();
-        return redirect('sub-category/manage')->with('message','Sub Category Unpublished');
+        return redirect('sub-category/manage')->with('message','Sub Category Published');
     }
     public function unpublishSubCategory($id){
         $subCategory = SubCategory::find($id);
