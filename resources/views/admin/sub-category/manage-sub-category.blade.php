@@ -20,13 +20,13 @@
                             @foreach($subCategories as $subCategory)
                                 <tr>
                                     <td>{{ $i++ }}</td>
-                                    <td>{{ $subcategory->sub_category_name }}</td>
+                                    <td>{{ $subCategory->sub_category_name }}</td>
 
                                     <td>
                                         <img src="{{ asset($subCategory->sub_category_photo) }}" alt="" height="100" width="100">
                                     </td>
                                     <td>{{ $subCategory->sub_category_detail }}</td>
-                                    <td class="{{ $subcategory->publication_status == 0 ? "btn-success" : "btn-danger" }}">{{ $subCategory->publication_status == 0 ? "Unpublished" : "Published" }}</td>
+                                    <td class="{{ $subCategory->publication_status == 0 ? "btn-success" : "btn-danger" }}">{{ $subCategory->publication_status == 0 ? "Unpublished" : "Published" }}</td>
                                     <td>
                                         @if($subCategory->publication_status == 1)
                                             <a href="{{ route('unpublish-category', ['id'=>$subCategory->id]) }}" class="btn btn-info btn-xs">
