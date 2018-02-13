@@ -34,7 +34,7 @@ class SubCategoryController extends Controller
     public function deleteSubCategory($id){
         $subCategory = SubCategory::find($id);
         $subCategory->delete();
-        return redirect('sub-category/manage')->with('message','ub Category Deleted Successfully');
+        return redirect('sub-category/manage')->with('message','Sub Category Deleted Successfully');
     }
     public function publishSubCategory($id){
         $subCategory = SubCategory::find($id);
