@@ -8,16 +8,16 @@ use Illuminate\Http\Request;
 class SubCategoryController extends Controller
 {
     public function index(){
-        return view('admin.category.add-sub-category');
+        return view('admin.sub-category.add-sub-category');
     }
 
     public function getAllSubCategoty(){
         $subCategories = SubCategory::all();
-        return view('admin.sub-category.manage', ['subCategories'=>$subCategories]);
+        return view('admin.sub-category.manage-sub-category', ['subCategories'=>$subCategories]);
     }
     public function getSubCategoryById($id){
         $subCategory = SubCategory::find($id);
-        return view('admin.sub-category.edit', ['subCategory'=>$subCategory]);
+        return view('admin.sub-category.edit-sub-category', ['subCategory'=>$subCategory]);
     }
 
     public function addSubCategory(Request $request){

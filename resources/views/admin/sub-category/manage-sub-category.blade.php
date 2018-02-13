@@ -17,30 +17,30 @@
                                 <th>Action</th>
                             </tr>
                             @php($i=1)
-                            @foreach($subcategories as $subcategory)
+                            @foreach($subCategories as $subCategory)
                                 <tr>
                                     <td>{{ $i++ }}</td>
                                     <td>{{ $subcategory->sub_category_name }}</td>
 
                                     <td>
-                                        <img src="{{ asset($subcategory->sub_category_photo) }}" alt="" height="100" width="100">
+                                        <img src="{{ asset($subCategory->sub_category_photo) }}" alt="" height="100" width="100">
                                     </td>
-                                    <td>{{ $subcategory->sub_category_detail }}</td>
-                                    <td class="{{ $subcategory->publication_status == 0 ? "btn-success" : "btn-danger" }}">{{ $subcategory->publication_status == 0 ? "Unpublished" : "Published" }}</td>
+                                    <td>{{ $subCategory->sub_category_detail }}</td>
+                                    <td class="{{ $subcategory->publication_status == 0 ? "btn-success" : "btn-danger" }}">{{ $subCategory->publication_status == 0 ? "Unpublished" : "Published" }}</td>
                                     <td>
-                                        @if($subcategory->publication_status == 1)
-                                            <a href="{{ route('unpublish-category', ['id'=>$subcategory->id]) }}" class="btn btn-info btn-xs">
+                                        @if($subCategory->publication_status == 1)
+                                            <a href="{{ route('unpublish-category', ['id'=>$subCategory->id]) }}" class="btn btn-info btn-xs">
                                                 <span class="glyphicon glyphicon-arrow-up"></span>
                                             </a>
                                         @else
-                                            <a href="{{ route('publish-category', ['id'=>$subcategory->id]) }}" class="btn btn-warning btn-xs">
+                                            <a href="{{ route('publish-category', ['id'=>$subCategory->id]) }}" class="btn btn-warning btn-xs">
                                                 <span class="glyphicon glyphicon-arrow-down"></span>
                                             </a>
                                         @endif
-                                        <a href="{{ route('edit-category', ['id'=>$subcategory->id]) }}" class="btn btn-success btn-xs">
+                                        <a href="{{ route('edit-category', ['id'=>$subCategory->id]) }}" class="btn btn-success btn-xs">
                                             <span class="glyphicon glyphicon-edit"></span>
                                         </a>
-                                        <a href="{{ route('delete-category', ['id'=>$subcategory->id]) }}" class="btn btn-danger btn-xs">
+                                        <a href="{{ route('delete-category', ['id'=>$subCategory->id]) }}" class="btn btn-danger btn-xs">
                                             <span class="glyphicon glyphicon-trash"></span>
                                         </a>
                                     </td>

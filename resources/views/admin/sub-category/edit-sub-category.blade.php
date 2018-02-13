@@ -22,8 +22,8 @@
                     <div class="form-group">
                         <label class="control-label col-md-3">Sub Category Name</label>
                         <div class="col-md-9">
-                            <input type="text" value="{{ $subcategory->sub_category_name }}" class="form-control" name="sub_category_name"/>
-                            <input type="hidden" value="{{ $subcategory->id }}" class="form-control" name="sub_category_id"/>
+                            <input type="text" value="{{ $subCategory->sub_category_name }}" class="form-control" name="sub_category_name"/>
+                            <input type="hidden" value="{{ $subCategory->id }}" class="form-control" name="sub_category_id"/>
                             <span class="text-danger">{{ $errors->has('sub_category_name') ? $errors->first('sub_category_name') : ' ' }}</span>
                         </div>
                     </div>
@@ -32,7 +32,7 @@
                     <div class="form-group">
                         <label class="control-label col-md-3">Sub Category Detail</label>
                         <div class="col-md-9">
-                            <textarea class="form-control"  name="sub_category_detail" id="editor">{{ $subcategory->sub_category_detail }}</textarea>
+                            <textarea class="form-control"  name="sub_category_detail" id="editor">{{ $subCategory->sub_category_detail }}</textarea>
                             <span class="text-danger">{{ $errors->has('sub_category_detail') ? $errors->first('sub_category_detail') : ' ' }}</span>
                         </div>
                     </div>
@@ -41,7 +41,7 @@
                         <div class="col-md-9">
                             <input type="file" name="sub_category_photo" accept="image/*"/>
                             <br/>
-                            <img src="{{ asset($subcategory->sub_category_photo) }}" alt="" height="80" width="80"/>
+                            <img src="{{ asset($subCategory->sub_category_photo) }}" alt="" height="80" width="80"/>
                             <span class="text-danger">{{ $errors->has('sub_category_photo') ? $errors->first('sub_category_photo') : ' ' }}</span>
                         </div>
                     </div>
@@ -49,8 +49,8 @@
                     <div class="form-group">
                         <label class="control-label col-md-3">Publication status</label>
                         <div class="col-md-9 radio">
-                            <label><input type="radio" name="publication_status" {{ $subcategory->publication_status == 1 ? 'checked' : '' }} value="1"/> Published </label>
-                            <label><input type="radio" name="publication_status" {{ $subcategory->publication_status == 0 ? 'checked' : '' }} value="0"/> Unpublished </label><br/>
+                            <label><input type="radio" name="publication_status" {{ $subCategory->publication_status == 1 ? 'checked' : '' }} value="1"/> Published </label>
+                            <label><input type="radio" name="publication_status" {{ $subCategory->publication_status == 0 ? 'checked' : '' }} value="0"/> Unpublished </label><br/>
                             <span class="text-danger">{{ $errors->has('publication_status') ? $errors->first('publication_status') : ' ' }}</span>
                         </div>
                     </div>
