@@ -32,7 +32,7 @@
                 <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Sub Category<span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level">
                     <li>
-                        <a href="{{ route('new-category') }}">Add Sub Category</a>
+                        <a href="{{ route('new-sub-category') }}">Add Sub Category</a>
                     </li>
                     <li>
                         <a href="{{ route('manage-sub-category') }}">Manage Sub Category</a>
