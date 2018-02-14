@@ -8,7 +8,7 @@
                 <div class="panel-body">
 
                     <h3 class="text-center text-success">{{ Session::get('message') }}</h3>
-                    {{ Form::open(['route'=>'update-category', 'method'=>'POST', 'class'=>'form-horizontal', 'enctype'=>'multipart/form-data', 'name'=>'editSubCategoryForm']) }}
+                    {{ Form::open(['route'=>'update-sub-category', 'method'=>'POST', 'class'=>'form-horizontal', 'enctype'=>'multipart/form-data', 'name'=>'editSubCategoryForm']) }}
                     <div class="form-group">
                         <label class="control-label col-md-3">Category Name</label>
                         <div class="col-md-9">
@@ -66,11 +66,14 @@
             </div>
         </div>
     </div>
+    @endforeach
 
+
+@endsection
+@section('script')
     <script>
         document.forms('editSubCategoryForm').elements['category_id'].value = '{{ $subCategory->category_id }}';
     </script>
-@endforeach
 @endsection
 
 

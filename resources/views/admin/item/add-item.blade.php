@@ -6,13 +6,25 @@
             <div class="panel panel-default">
                 <div class="panel-body">
                     <h3 class="text-center text-success">{{ Session::get('message') }}</h3>
-                    {{ Form::open(['route'=>'new-item', 'method'=>'POST', 'class'=>'form-horizontal', 'enctype'=>'multipart/form-data']) }}
+                    {{ Form::open(['route'=>'add-item', 'method'=>'POST', 'class'=>'form-horizontal', 'enctype'=>'multipart/form-data']) }}
+                    <div class="form-group">
+                        <label class="control-label col-md-3">Category Name</label>
+                        <div class="col-md-9">
+                            <select class="form-control" name="sub_category_id">
+                                <option>--- Select Sub Category Name---</option>
+                                @foreach($providedCategories as $category)
+                                    <option value="{{ $category->id }}">{{ $category->category_name }}</option>
+                                @endforeach
+                            </select>
+                            <span class="text-danger">{{ $errors->has('sub_category_name') ? $errors->first('sub_category_name') : ' ' }}</span>
+                        </div>
+                    </div>
                     <div class="form-group">
                         <label class="control-label col-md-3">Sub Category Name</label>
                         <div class="col-md-9">
                             <select class="form-control" name="sub_category_id">
                                 <option>--- Select Sub Category Name---</option>
-                                @foreach($subCategories as $subCategory)
+                                @foreach($providedSubCategories as $subCategory)
                                     <option value="{{ $subCategory->id }}">{{ $subCategory->sub_category_name }}</option>
                                 @endforeach
                             </select>
@@ -45,6 +57,13 @@
                         <div class="col-md-9">
                             <input type="number" class="form-control" name="unit"/>
                             <span class="text-danger">{{ $errors->has('unit') ? $errors->first('unit') : ' ' }}</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-3">Sub Category Photo</label>
+                        <div class="col-md-9">
+                            <input class="form-control" type="file" name="image" accept="image/*"/>
+                            <span class="text-danger">{{ $errors->has('sub_category_photo') ? $errors->first('sub_category_photo') : ' ' }}</span>
                         </div>
                     </div>
                     <div class="form-group">

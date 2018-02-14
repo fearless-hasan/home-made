@@ -90,7 +90,7 @@
 <footer>
     <div class="container">
         <div class="row">
-            <div class="span12">Cooking Recipes &copy; 2013. <br><a href="{{route('privacy-policy')}}">Privacy Policy</a> <!-- {%FOOTER_LINK} --></div>
+            <div class="span12">Cooking Recipes &copy; 2018. <br><a href="{{route('privacy-policy')}}">Privacy Policy</a> <!-- {%FOOTER_LINK} --></div>
         </div>
     </div>
 </footer>

@@ -27,10 +27,10 @@
                                     <td>{{ $item->item_detail }}</td>
                                     <td>{{ $item->unit }}</td>
                                     <td>{{ $item->price }}</td>
-                                    <td class="{{ $item->publication_status == 0 ? "btn-success" : "btn-danger" }}">{{ $item->publication_status == 0 ? "Unpublished" : "Published" }}</td>
+                                    <td class="{{ $item->publication_status == 1 ? "btn-success" : "btn-danger" }}">{{ $item->publication_status == 0 ? "Unpublished" : "Published" }}</td>
                                     <td>
                                         @if($item->publication_status == 1)
-                                            <a href="{{ route('unpublish-item', ['id'=>$item->id]) }}" class="btn btn-info btn-xs">
+                                            <a href="{{ route('unpublish-item', ['id' => $item->id]) }}" class="btn btn-info btn-xs">
                                                 <span class="glyphicon glyphicon-arrow-up"></span>
                                             </a>
                                         @else

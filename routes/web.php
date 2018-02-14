@@ -43,6 +43,12 @@ Route::get('/privacy-policy', [
 ]);
 
 
+//Order
+Route::get('/Order/{id}',[
+    'uses'=>'OrderController@index',
+    'as'=>'order'
+]);
+
 
 
 //category
@@ -125,7 +131,7 @@ Route::get('/sub-category/unpublish/{id}',[
     'as'=>'unpublish-sub-category'
 ]);
 
-Route::get('/sub-category/update',[
+Route::post('/sub-category/update',[
     'uses'=>'SubCategoryController@updateSubCategory',
     'as'=>'update-sub-category'
 ]);
@@ -158,20 +164,22 @@ Route::get('/item/delete/{id}',[
     'as'=>'delete-item'
 ]);
 
-Route::get('/item/publish',[
-    'uses'=>'ItemController@publishCategory',
+Route::get('/item/publish/{id}',[
+    'uses'=>'ItemController@publishItem',
     'as'=>'publish-item'
 ]);
 
-Route::get('/item/unpublish',[
+Route::get('/item/unpublish/{id}',[
     'uses'=>'ItemController@unpublishItem',
     'as'=>'unpublish-item'
 ]);
 
-Route::get('/item/update',[
+Route::post('/item/update',[
     'uses'=>'ItemController@updateItem',
     'as'=>'update-item'
-]);//review
+]);
+
+//review
 
 Route::get('/review/new',[
     'uses'=>'ReviewController@index',

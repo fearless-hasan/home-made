@@ -6,7 +6,7 @@
             <div class="panel panel-default">
                 <div class="panel-body">
                     <h3 class="text-center text-success">{{ Session::get('message') }}</h3>
-                    {{ Form::open(['route'=>'update-category', 'method'=>'POST', 'class'=>'form-horizontal', 'enctype'=>'multipart/form-data', 'name'=>'editSubCategoryForm']) }}
+                    {{ Form::open(['route'=>'update-item', 'method'=>'POST', 'class'=>'form-horizontal', 'enctype'=>'multipart/form-data', 'name'=>'editSubCategoryForm']) }}
                     <div class="form-group">
                         <label class="control-label col-md-3">Sub Category Name</label>
                         <div class="col-md-9">
@@ -30,7 +30,7 @@
                     <div class="form-group">
                         <label class="control-label col-md-3">Item Detail</label>
                         <div class="col-md-9">
-                            <textarea class="form-control"  name="item_detail" id="editor">{{ $subCategory->item_detail }}</textarea>
+                            <textarea class="form-control"  name="item_detail" id="editor">{{ $item->item_detail }}</textarea>
                             <span class="text-danger">{{ $errors->has('item_detail') ? $errors->first('item_detail') : ' ' }}</span>
                         </div>
                     </div>
@@ -46,6 +46,15 @@
                         <div class="col-md-9">
                             <input type="number" value="{{ $item->price }}" class="form-control" name="price"/>
                             <span class="text-danger">{{ $errors->has('price') ? $errors->first('price') : ' ' }}</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-3">Photo</label>
+                        <div class="col-md-9">
+                            <input type="file" name="sub_category_photo" accept="image/*"/>
+                            <br/>
+                            <img src="{{ asset($item->image) }}" alt="" height="80" width="80"/>
+                            <span class="text-danger">{{ $errors->has('sub_category_photo') ? $errors->first('sub_category_photo') : ' ' }}</span>
                         </div>
                     </div>
                     <div class="form-group">

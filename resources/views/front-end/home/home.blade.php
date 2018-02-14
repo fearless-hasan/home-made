@@ -33,76 +33,19 @@
             <div class="row">
                 <div class="list_carousel responsive clearfix">
                     <ul id="foo" class="text">
+                        @foreach($providedItems as $item)
                         <li class="span3">
                             <div>
-                                <img alt="" src="{{ asset('/') }}/front-end/img/page1-img1.jpg">
-                                <a href="#" class="caption">
-                                    <p class="text-info">Quis nostrud</p>
-                                    Adipisicing elit sed do eiusmod
+                                <img alt="" src="{{ asset('/') }}/{{ $item->image }}">
+                                <a href="{{ route('order', ['id'=>$item->id]) }}" class="caption">
+                                    <p class="text-info">{{ $item->item_name }}</p>
+                                    Adipisicing elit sed do eiusmod.<br>
+                                    {{ $item->item_detail }}
                                 </a>
                             </div>
                         </li>
-                        <li class="span3">
-                            <div>
-                                <img alt="" src="{{ asset('/') }}/front-end/img/page1-img2.jpg">
-                                <a href="#" class="caption"><p class="text-info">Excepteur sint </p>
-                                    Adipisicing elit sed do eiusmod</a>
-                            </div>
-                        </li>
-                        <li class="span3">
-                            <div>
-                                <img alt="" src="{{ asset('/') }}/front-end/img/page1-img3.jpg">
-                                <a href="#" class="caption">
-                                    <p class="text-info">Occaecat cupidatat</p>
-                                    Adipisicing elit sed do eiusmod
-                                </a>
-                            </div>
-                        </li>
-                        <li class="span3">
-                            <div>
-                                <img alt="" src="{{ asset('/') }}/front-end/img/page1-img4.jpg">
-                                <a href="#" class="caption">
-                                    <p class="text-info">Non proident</p>
-                                    Adipisicing elit sed do eiusmod
-                                </a>
-                            </div>
-                        </li>
-                        <li class="span3">
-                            <div>
-                                <img alt="" src="{{ asset('/') }}/front-end/img/page1-img1.jpg">
-                                <a href="#" class="caption">
-                                    <p class="text-info">Quis nostrud</p>
-                                    Adipisicing elit sed do eiusmod
-                                </a>
-                            </div>
-                        </li>
-                        <li class="span3">
-                            <div>
-                                <img alt="" src="{{ asset('/') }}/front-end/img/page1-img2.jpg">
-                                <a href="#" class="caption">
-                                    <p class="text-info">Excepteur sint </p>
-                                    Adipisicing elit sed do eiusmod
-                                </a>
-                            </div>
-                        </li>
-                        <li class="span3">
-                            <div>
-                                <img alt="" src="{{ asset('/') }}/front-end/img/page1-img3.jpg">
-                                <a href="#" class="caption">
-                                    <p class="text-info">Occaecat cupidatat</p>
-                                    Adipisicing elit sed do eiusmod
-                                </a>
-                            </div>
-                        </li>
-                        <li class="span3">
-                            <div>
-                                <img alt="" src="{{ asset('/') }}/front-end/img/page1-img4.jpg">
-                                <a href="#" class="caption">
-                                    <p class="text-info">Non proident</p>
-                                    Adipisicing elit sed do eiusmod
-                                </a>
-                            </div>
-                        </li>
+                            @endforeach
+
                     </ul>
                     <a id="prev" class="prev" href="#"></a>
                     <a id="next" class="next" href="#"></a>

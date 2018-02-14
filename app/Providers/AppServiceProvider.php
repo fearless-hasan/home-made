@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use App\Category;
+use App\Item;
 use App\SubCategory;
 use Illuminate\Support\ServiceProvider;
 
@@ -21,6 +22,11 @@ class AppServiceProvider extends ServiceProvider
         View::composer('admin.*', function ($view) {
             $view->with('providedCategories', Category::where('publication_status', 1)->get());
             $view->with('providedSubCategories', SubCategory::where('publication_status', 1)->get());
+        });
+        View::composer('front-end.*', function ($view) {
+            $view->with('providedCategories', Category::where('publication_status', 1)->get());
+            $view->with('providedSubCategories', SubCategory::where('publication_status', 1)->get());
+            $view->with('providedItems', Item::where('publication_status', 1)->get());
         });
     }
 

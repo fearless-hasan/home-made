@@ -77,5 +77,7 @@
 <script>
     initSample();
 </script>
+
+@yield('script')
 </body>
 </html>

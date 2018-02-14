@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Category;
 use App\SubCategory;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -64,11 +63,15 @@ class SubCategoryController extends Controller
         $subCategory->save();
         return redirect('sub-category/manage')->with('message','Sub Category Unpublished');
     }
-    public function updateSubCategory(Request $request,$id){
-        $subCategory = Category::find($id);
+    public function updateSubCategory(Request $request){
+        $subCategory = SubCategory::find($request->sub_category_id);
+
         $subCategory->category_id = $request-> category_id;
         $subCategory->sub_category_name = $request-> sub_category_name;
-        $subCategory->sub_category_photo = $request-> sub_category_photo;
+        if($request-> sub_category_photo) {
+            $imageUrl = $this->imageUpload($request);
+            $subCategory->sub_category_photo = $imageUrl;
+        }
         $subCategory->sub_category_detail = $request-> sub_category_detail;
         $subCategory->publication_status = $request-> publication_status;
         $subCategory->update();
