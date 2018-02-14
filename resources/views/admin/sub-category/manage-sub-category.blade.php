@@ -10,7 +10,7 @@
                         <table class="table table-bordered">
                             <tr class="bg-primary">
                                 <th>Sl No</th>
-                                <th>Categiry Name</th>
+                                <th>Category Name</th>
                                 <th>Sub Category Name</th>
                                 <th>Sub Category Photo</th>
                                 <th>Sub Category Detail</th>
@@ -28,7 +28,7 @@
                                         <img src="{{ asset($subCategory->sub_category_photo) }}" alt="" height="100" width="100">
                                     </td>
                                     <td>{{ $subCategory->sub_category_detail }}</td>
-                                    <td class="{{ $subCategory->publication_status == 0 ? "btn-success" : "btn-danger" }}">{{ $subCategory->publication_status == 0 ? "Unpublished" : "Published" }}</td>
+                                    <td class="{{ $subCategory->publication_status == 1 ? "btn-success" : "btn-danger" }}">{{ $subCategory->publication_status == 0 ? "Unpublished" : "Published" }}</td>
                                     <td>
                                         @if($subCategory->publication_status == 1)
                                             <a href="{{ route('unpublish-sub-category', ['id'=>$subCategory->id]) }}" class="btn btn-info btn-xs">
@@ -54,5 +54,6 @@
             </div>
         </div>
     </div>
+
 
 @endsection

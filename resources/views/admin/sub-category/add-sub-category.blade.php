@@ -12,7 +12,7 @@
                         <div class="col-md-9">
                             <select class="form-control" name="category_id">
                                 <option>--- Select Category Name---</option>
-                                @foreach($categories as $category)
+                                @foreach($providedCategories as $category)
                                     <option value="{{ $category->id }}">{{ $category->category_name }}</option>
                                 @endforeach
                             </select>

@@ -1,10 +1,12 @@
 @extends('admin.master')
 @section('body')
     <br/>
+    @foreach($subCategories as $subCategory)
     <div class="row">
         <div class="col-md-12">
             <div class="panel panel-default">
                 <div class="panel-body">
+
                     <h3 class="text-center text-success">{{ Session::get('message') }}</h3>
                     {{ Form::open(['route'=>'update-category', 'method'=>'POST', 'class'=>'form-horizontal', 'enctype'=>'multipart/form-data', 'name'=>'editSubCategoryForm']) }}
                     <div class="form-group">
@@ -12,7 +14,7 @@
                         <div class="col-md-9">
                             <select class="form-control" name="category_id">
                                 <option>--- Select Category Name---</option>
-                                @foreach($categories as $category)
+                                @foreach($providedCategories as $category)
                                     <option value="{{ $category->id }}">{{ $category->category_name }}</option>
                                 @endforeach
                             </select>
@@ -65,6 +67,10 @@
         </div>
     </div>
 
+    <script>
+        document.forms('editSubCategoryForm').elements['category_id'].value = '{{ $subCategory->category_id }}';
+    </script>
+@endforeach
 @endsection
 
 

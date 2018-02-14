@@ -82,7 +82,7 @@ Route::get('/category/unpublish/{id}',[
     'as'=>'unpublish-category'
 ]);
 
-Route::get('/category/update',[
+Route::post('/category/update',[
     'uses'=>'CategoryController@updateCategory',
     'as'=>'update-category'
 ]);
@@ -96,7 +96,7 @@ Route::get('/sub-category/new',[
 ]);
 
 Route::get('/sub-category/manage',[
-    'uses'=>'SubCategoryController@getAllSubCategoty',
+    'uses'=>'SubCategoryController@getAllSubCategory',
     'as'=>'manage-sub-category'
 ]);
 
@@ -115,12 +115,12 @@ Route::get('/sub-category/delete/{id}',[
     'as'=>'delete-sub-category'
 ]);
 
-Route::get('/sub-category/publish',[
+Route::get('/sub-category/publish/{id}',[
     'uses'=>'SubCategoryController@publishSubCategory',
     'as'=>'publish-sub-category'
 ]);
 
-Route::get('/sub-category/unpublish',[
+Route::get('/sub-category/unpublish/{id}',[
     'uses'=>'SubCategoryController@unpublishSubCategory',
     'as'=>'unpublish-sub-category'
 ]);

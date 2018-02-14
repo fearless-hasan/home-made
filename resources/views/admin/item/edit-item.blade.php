@@ -12,7 +12,7 @@
                         <div class="col-md-9">
                             <select class="form-control" name="sub_category_id">
                                 <option>--- Select Sub Category Name---</option>
-                                @foreach($subCategories as $subCategory)
+                                @foreach($providedSubCategories as $subCategory)
                                     <option value="{{ $subCategory->id }}">{{ $subCategory->sub_category_name }}</option>
                                 @endforeach
                             </select>
@@ -66,6 +66,11 @@
             </div>
         </div>
     </div>
+
+    <script>
+        document.forms('editSubCategoryForm').element['sub_category_id'].value = '';
+
+    </script>
 
 @endsection
 
