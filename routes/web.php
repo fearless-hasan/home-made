@@ -139,22 +139,22 @@ Route::get('/item/new',[
 ]);
 
 Route::get('/item/manage',[
-    'uses'=>'ItemController@getAllCategoty',
+    'uses'=>'ItemController@getAllItem',
     'as'=>'manage-item'
 ]);
 
 Route::get('/item/edit/{id}',[
-    'uses'=>'ItemController@getCategoryById',
+    'uses'=>'ItemController@getItemById',
     'as'=>'edit-item'
 ]);
 
 Route::post('/item/add',[
-    'uses'=>'ItemController@addCategory',
+    'uses'=>'ItemController@addItem',
     'as'=>'add-item'
 ]);
 
 Route::get('/item/delete/{id}',[
-    'uses'=>'ItemController@deleteCategory',
+    'uses'=>'ItemController@deleteItem',
     'as'=>'delete-item'
 ]);
 
@@ -164,14 +164,14 @@ Route::get('/item/publish',[
 ]);
 
 Route::get('/item/unpublish',[
-    'uses'=>'ItemController@unpublishCategory',
+    'uses'=>'ItemController@unpublishItem',
     'as'=>'unpublish-item'
 ]);
 
 Route::get('/item/update',[
-    'uses'=>'ItemController@updateCategory',
+    'uses'=>'ItemController@updateItem',
     'as'=>'update-item'
-]);//category
+]);//review
 
 Route::get('/review/new',[
     'uses'=>'ReviewController@index',

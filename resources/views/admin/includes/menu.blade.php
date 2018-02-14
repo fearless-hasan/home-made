@@ -32,7 +32,7 @@
                 <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Sub Category<span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level">
                     <li>
-                        <a href="{{ route('add-sub-category') }}">Add Sub Category</a>
+                        <a href="{{ route('new-category') }}">Add Sub Category</a>
                     </li>
                     <li>
                         <a href="{{ route('manage-sub-category') }}">Manage Sub Category</a>
@@ -44,17 +44,17 @@
                 <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Item<span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level">
                     <li>
-                        <a href="flot.html">Flot Charts</a>
+                        <a href="{{ route('new-item') }}">Add Item</a>
                     </li>
                     <li>
-                        <a href="morris.html">Morris.js Charts</a>
+                        <a href="{{ route('manage-item') }}">Manage Item</a>
                     </li>
                 </ul>
             <li>
                 <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>Review<span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level">
                     <li>
-                        <a href="{{ route('add-review') }}">Add Review</a>
+                        <a href="{{ route('new-review') }}">Add Review</a>
                     </li>
                     <li>
                         <a href="{{ route('manage-review') }}">Manage Review</a>
